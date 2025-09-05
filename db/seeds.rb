@@ -7,11 +7,19 @@ Guest.create!([
   { first_name: "Elvis", last_name: "Tec", email: "test@test.com", phone: "912345678", document_id: "141414142" }
 ])
 
+puts "Loading Rooms"
+
 Room.create!([
   { number: "101", room_type: 1, price: 1000, status: 1 },
   { number: "201", room_type: 2, price: 2000, status: 2 },
   { number: "301", room_type: 3, price: 3000, status: 3 }
 ])
 
+puts "Loading Services"
+
+Service.create!([
+  { name: "Laundry", price: 20, is_active: true },
+  { name: "Spa", price: 15, is_active: false }
+])
 
 
