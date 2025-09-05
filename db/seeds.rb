@@ -26,8 +26,17 @@ puts "Loading Reservations"
 
 Reservation.create!([
   { code: "code1", guest_id: 1, room_id: 1, check_in: Date.new(2025, 9, 1), check_out: Date.new(2025, 9, 15), status: 1, adults: 1, children: 2 },
-  { code: "code2", guest_id: 2, room_id: 3, check_in: Date.new(1995, 12, 21), check_out: Date.new(9999, 12, 31), status: 1, adults:1 }
+  { code: "code2", guest_id: 2, room_id: 3, check_in: Date.new(1995, 12, 21), check_out: Date.new(9999, 12, 31), status: 1, adults: 1 }
 ])
+
+puts "Loading ServiceUsages"
+
+ServiceUsage.create!([
+  { reservation_id: 1, service_id: 1, quantity: 2, used_at: DateTime.new(2025, 9, 10, 10, 0), note: "2 Shirts and 4 pants" },
+  { reservation_id: 1, service_id: 2, quantity: 1, used_at: DateTime.new(2004, 10, 12, 5), note: "1 hour session" }
+])
+
+
 
 
 
